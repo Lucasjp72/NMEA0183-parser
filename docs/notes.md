@@ -1,3 +1,17 @@
+# Git NOTES
+1) branch ie. git switch -c docs/rmc-notes (specific to the RMC notes branch)
+2) confirm changes are there ie. git status
+3) stage it ie. git add docs/notes.md
+4) commit it ie. git commit -m "message"
+5) push it ie. git push -u origin docs/rmc-notes
+6) Open given link, approve pull request and merge
+7) Sync Main ie. git switch main
+8) Pull ie. git pull
+
+
+
+
+
 # NMEA GGA Sentence Notes
 
 Example: `$GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47`
