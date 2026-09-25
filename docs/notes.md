@@ -8,6 +8,11 @@
 7) Sync Main ie. git switch main
 8) Pull ie. git pull
 
+# Parser Requirements 
+The parser shall validate the checksum of every sentence before extracting field data.
+The parser shall reject sentences with an invalid checksum without crashing.
+The parser shall decode GGA sentences into latitude, longitude, altitude, fix quality, and satellite count.
+The parser shall convert coordinate fields from degrees-minutes format to decimal degrees.
 
 ## NMEA 4.11 System ID and Signal ID Reference
 
@@ -71,6 +76,7 @@
 | | | | 4 | S-RS |
 | | | | 5 | L1-SPS |
 | | | | 6 - F | Reserved |
+
 
 
 # NMEA GGA Sentence Notes
