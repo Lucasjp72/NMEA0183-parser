@@ -9,7 +9,68 @@
 8) Pull ie. git pull
 
 
+## NMEA 4.11 System ID and Signal ID Reference
 
+| GNSS System | System ID | Satellite ID | Signal ID | Signal / Channel |
+|---|---|---|---|---|
+| GPS | 1 (GP) | 1 - 32 GPS, 33 - 64 GPS SBAS | 0 | All signals |
+| | | | 1 | L1 C/A |
+| | | | 2 | L1 P(Y) |
+| | | | 3 | L1 M |
+| | | | 4 | L2 P(Y) |
+| | | | 5 | L2C-M |
+| | | | 6 | L2C-L |
+| | | | 7 | L5-I |
+| | | | 8 | L5-Q |
+| | | | 9 - F | Reserved |
+| GLONASS | 2 (GL) | 1 - 99, 33 - 64 SBAS, 65 - 99 GL | 0 | All signals |
+| | | | 1 | L1 C/A |
+| | | | 2 | L1 P |
+| | | | 3 | L2 C/A |
+| | | | 4 | L2 P |
+| | | | 5 - 16 | Reserved |
+| Galileo | 3 (GA) | 1 - 36 GA, 37 - 64 GA SBAS | 0 | All signals |
+| | | | 1 | E5a |
+| | | | 2 | E5b |
+| | | | 3 | E5a+b |
+| | | | 4 | E6-A |
+| | | | 5 | E6-BC |
+| | | | 6 | L1-A |
+| | | | 7 | L1-BC |
+| | | | 8 - 16 | Reserved |
+| BDS (BeiDou System) | 4 (GB/BD) | 1 - 64 BD | 0 | All signals |
+| | | | 1 | B1I |
+| | | | 2 | B1Q |
+| | | | 3 | B1C |
+| | | | 4 | B1A |
+| | | | 5 | B2-a |
+| | | | 6 | B2-b |
+| | | | 7 | B2 a+b |
+| | | | 8 | B3I |
+| | | | 9 | B3Q |
+| | | | 10 | B3A |
+| | | | 11 | B2I |
+| | | | 12 | B2Q |
+| | | | 13 - 16 | Reserved |
+| QZSS | 5 (GQ) | 1 - 10 QZ, 55 - 63 QZ SBAS | 0 | All signals |
+| | | | 1 | L1 C/A |
+| | | | 2 | L1C (D) |
+| | | | 3 | L1C (P) |
+| | | | 4 | L1S |
+| | | | 5 | L2C-M |
+| | | | 6 | L2C-L |
+| | | | 7 | L5-I |
+| | | | 8 | L5-Q |
+| | | | 9 | L6D |
+| | | | 10 | L6E |
+| | | | 11 - 16 | Reserved |
+| NavIC | 6 (GI) | 1 - 15 GI, 33 - 64 SBAS | 0 | All signals |
+| | | | 1 | L5-SPS |
+| | | | 2 | S-SPS |
+| | | | 3 | L5-RS |
+| | | | 4 | S-RS |
+| | | | 5 | L1-SPS |
+| | | | 6 - F | Reserved |
 
 
 # NMEA GGA Sentence Notes
