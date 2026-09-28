@@ -4,16 +4,18 @@
 bool validateChecksum(const std::string& sentence){
     int correctChecksum;
     int computedChecksum;
-    for (size_t i = 0; i < sentence.size(); ++i) {
-        if (sentence[i] == '*'){ //find the position of '*'
-            if (i + 3 == sentence.size()){ //make sure there are exactly two hex digits after '*'
-                break;
-            }
-            correctChecksum = std::stoi(sentence.substr(i + 1, 2), nullptr, 16); //turn the two hex digits after '*' into an integer
-            computedChecksum = computeChecksum(sentence.substr(0, i));
-            break;
-        }
+
+    size_t starLocation = sentence.find('*'); //find the position of '*'
+    if (starLocation == std::string::npos){
+        return false;
+    } 
+    if (starLocation + 3 != sentence.size()){ //make sure there are exactly two hex digits after '*'
+        return false;
     }
+    correctChecksum = std::stoi(sentence.substr(starLocation + 1, 2), nullptr, 16); //collect the checksum from the sentence
+    computedChecksum = computeChecksum(sentence.substr(0, starLocation)); //compute the checksum of the sentence without the '*' and the two hex digits
+    
+
     return correctChecksum == computedChecksum; //compare it to the computed checksum
     
 }
