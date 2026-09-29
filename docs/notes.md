@@ -95,6 +95,22 @@ Order of CheckSum:
 4) Final value == 47? (Hex) 
 5) If yes then transmission successful 
 
+Index	Field
+0	UTC time
+1	Latitude
+2	N/S
+3	Longitude
+4	E/W
+5	Fix quality
+6	Satellites
+7	HDOP
+8	Altitude
+9	Altitude units (M)
+10	Geoid separation
+11	Geoid separation units (M)
+12	Age of DGPS data
+13	DGPS station ID
+
 
 # NMEA RMC Setence Notes
 

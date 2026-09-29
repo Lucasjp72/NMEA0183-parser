@@ -10,6 +10,14 @@ struct GGAdata {
     int satellites;
     double hdop;
     double altitudeMeters;
+    std::string altitudeRaw;
+    double geoidSeparationMeters;
+    std::string geoidSeparationRaw;
+    double ageOfDGPS;
+    std::string DGPSstationID;
+    std::string NS;
+    std::string EW;
+    
 };
 
 
