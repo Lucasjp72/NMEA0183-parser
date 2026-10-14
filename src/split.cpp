@@ -2,13 +2,14 @@
 #include <vector>
 #include <string>
 #include "validate.hpp"
+using namespace std;
 
-std::vector<std::string> splitFields(const std::string& sentence) {
-    std::vector<std::string> fields;
-    std::string currentField;
+vector<string> splitFields(const string& sentence) {
+    vector<string> fields;
+    string currentField;
 
     size_t firstComma = sentence.find(',');
-    if (firstComma == std::string::npos) {
+    if (firstComma == string::npos) { //if no comma is found then sentence is invalid and return empty set of fields
         return {};
     }
 

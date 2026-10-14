@@ -1,27 +1,29 @@
 #pragma once
 #include <string>
 #include <cstdint>
-
-struct GGAdata {
-    std::string utcTime; //raw string hhmmss.ss (temporary)
+using namespace std;
+    
+struct GGAdata { //list of each field in a GGA sentence (ordered)
+    string utcTime; //raw string hhmmss.ss (temporary)
     double latitude; //decimal degrees - already converted
     double longitude; //decimal degrees - already converted
-    int fixQuality;
+    int fixQuality; 
     int satellites;
     double hdop;
     double altitudeMeters;
-    std::string altitudeRaw;
+    string altitudeRaw;
     double geoidSeparationMeters;
-    std::string geoidSeparationRaw;
+    string geoidSeparationRaw;
     double ageOfDGPS;
-    std::string DGPSstationID;
-    std::string NS;
-    std::string EW;
+    string DGPSstationID;
+    string NS;
+    string EW;
     
 };
 
 
-//Parses a GGA sentence into a GGAdata struct
-//Returns true on success, false if the sentence is malformed or fails checksum.
+//parses a GGA sentence into a GGAdata struct
+//returns true on success
+//returns false if the sentence is malformed or fails checksum.
 
-bool parseGGA(const std::string& sentence, GGAdata& out);
+bool parseGGA(const string& sentence, GGAdata& out);

@@ -1,5 +1,5 @@
 #pragma once   
 #include <string>
 #include <vector>
-
-std::vector<std::string> splitFields(const std::string& str);
+using namespace std;
+vector<string> splitFields(const string& str); 
